@@ -54,3 +54,30 @@ h2#page_title {
 	margin-right: 10px;
 	float: left;
 }
+
+#toolbar {
+	top: 10px;
+	width: 180px;
+	font-size: 10pt;
+	line-height: 1.5em;
+	margin-left: 670px;
+	position: absolute;	
+	padding: 10px;
+	border: 1px solid #CCC;
+	background: white;
+}
+
+#toolbar ul {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+#toolbar ul li {
+	list-style-type: square;
+	list-style-position: outside;
+	margin-left: 20px;
+}
+
+#toolbar ul a {
+	color: #666;
+}

@@ -8,7 +8,11 @@ handlers:
   static_dir: images
 - url: /stylesheets
   static_dir: stylesheets
+- url: /script
+  static_dir: script
 - url: /mskkconverter*
   script: classes/mskkconverter.py
+- url: /msgoingconverter*
+  script: classes/msgoingconverter.py
 - url: .*
-  script: main.py
+  script: classes/main.py

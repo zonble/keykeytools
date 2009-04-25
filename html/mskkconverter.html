@@ -1,69 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<div id="content">
+	<h2 class="page_title">
+		好打注音輸入法匯入微軟新注音自訂詞庫工具
+	</h2>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>
-		Yahoo! KeyKey 工具組 | 好打注音輸入法匯入微軟新注音自訂詞庫工具
-	</title>
-	<style type="text/css" media="screen">
-		@import url('/stylesheets/main.css');
-		@import url('/stylesheets/mskkconverter.css');
-	</style>
-</head>
-
-<body>
-	<div id="main">
-		<div id="header">
-			<h1><a href="/"><span>Yahoo! KeyKey 工具組</span></a></h1>
-		</div>
-		<div id="content">
-			<h2 class="page_title">
-				好打注音輸入法匯入微軟新注音自訂詞庫工具
-			</h2>
-			
-			<p class="error">{{ error_msg }}</p>
-			
-			<div id="upload_form">
-				<form enctype="multipart/form-data" action="/mskkconverter" method="POST">
-				<p>請選擇您想要上傳的新注音詞庫檔案</p>
-				<p><input name="uploadedfile" type="file" id="uploadedfile"/><input type="submit" value="上傳！" /></p>
-				</form>	
-			</div>
-			<div class="help">
-				<h3>使用說明</h3>
-
-				<p>這個工具可以幫助您將微軟新注音輸入法中所建立的自訂詞庫，轉換成 Yahoo! 奇摩輸入法中的「好打注音」輸入法詞庫。請按照以下步驟操作－</p>
-
-				<h4>從新注音輸入法中匯出詞庫</h4>
-				<div class="help_image_block">
-					<img src="/images/mskkconverter/exportms1.png" class="help_image"/>
-					<img src="/images/mskkconverter/exportms2.png" class="help_image"/>
-				</div>
-				<p>微軟新注音輸入法提供兩種使用者自行加入新詞的方式－一是在輸入時、輸入緩區中還有內容的狀況下，按住鍵盤上的 Shift 按鍵，然後按下左右鍵移動輸入游標，這時候，輸入區下方會出現一條較粗的底線，這條底線的範圍，就是要加入新詞的範圍；在按下了 Enter 鍵之後，便可以加入新詞。另外一種方式，則是叫出新注音輸入法的「使用者造詞工具」。</p>
-				<p>要將新注音輸入法的自訂詞庫轉換到 Yahoo! 奇摩輸入法的好打注音使用，第一步自然是要先匯出新注音輸入法的詞庫。首先請從新注音輸入法的工具列中，選擇「工具選單」，選擇「使用者造詞」，便可以叫出「使用者造詞工具」。</p>
-				<p>在「使用者造詞工具」中，請選擇「檔案」選單中的「匯出」，便可以透過純文字檔案的方式，匯出所有已經建立的使用者自訂詞庫。</p>
-				<p><strong>請注意：</strong>因為新注音輸入法的版本相當多，在寫這個工具的時候，無法找到所有版本的新注音輸入法測試，這個工具只測試過 2002、2003（Windows XP 平台），以及 2007 版（Windows Vista 內建，或購買 Office 2007 附贈）。</p>				
-				<h4>上傳詞庫並轉換</h4>
-				<p>請將剛剛匯出的文字檔，透過本頁上方的表格上傳轉換。上傳成功之後，會自動產生一個供 Yahoo! 奇摩輸入法使用的純文字檔案。</p>
-				<h4>將轉出的詞庫匯入 Yahoo! 奇摩輸入法</h4>
-				<p>轉出的純文字檔案通用於 Yahoo! 奇摩輸入法的 Windows 版本與 Mac OS X 版本－
-				<h5>Windows 版本</h5>
-				<div class="help_image_block">
-					<img src="/images/mskkconverter/importkk1.png" class="help_image"/>
-				</div>
-				<p>請從 Yahoo! 奇摩輸入法的工具列中，點選最右邊的工具（搥子）圖示，從工具選單中選擇「偏好設定」，從「偏好設定」中選擇「詞彙」，便可以看到「匯入自訂詞詞庫」按鈕。</p>
-				<p>按下「匯入自訂詞詞庫」按鈕後，便會詢問您想要匯入哪個檔案，請選擇剛剛下載的檔案，便可完成匯入。</p>
-				<p>如果您想要確認是否正確匯入，您也可以在同一頁當中，按下「啟動詞彙編輯工具」按鈕，叫出 Yahoo! 奇摩輸入法的詞彙編輯工具，在這個工具的編輯畫面中，檢查是否出現剛才匯入的詞彙。</p>
-				<h5>Mac OS X 版本</h5>
-				<p>Mac OS X 版本的匯入方式，可說與 Windows 版本完全相同。</p>
-				<p>當您在使用 Yahoo! 奇摩輸入法時，按下畫面右上方選單列（menu bar）上的 Yahoo! 奇摩輸入法圖示，便可以叫出輸入法選單，從輸入法選單中，便可以叫出偏好設定工具。同樣的，您也可以在 Mac OS X 版本的偏好設定工具中，找到「匯入自訂詞詞庫」按鈕，匯入詞庫。</p>
-				
-			</div>
-		</div>
-
+	<p class="error">{{ error_msg }}</p>
+	
+	<div id="upload_form">
+		<form enctype="multipart/form-data" action="/mskkconverter" method="POST">
+		<p>請選擇您想要上傳的新注音詞庫檔案</p>
+		<p><input name="uploadedfile" type="file" id="uploadedfile"/><input type="submit" value="上傳！" /></p>
+		</form>	
 	</div>
-</body>
-</html>
+	<div class="help">
+		<h3>使用說明</h3>
+
+		<p>這個工具可以幫助您將微軟新注音輸入法中所建立的自訂詞庫，轉換成 Yahoo! 奇摩輸入法中的「好打注音」輸入法詞庫。請按照以下步驟操作－</p>
+
+		<h4>從新注音輸入法中匯出詞庫</h4>
+		<div class="help_image_block">
+			<img src="/images/mskkconverter/exportms1.png" class="help_image"/>
+			<img src="/images/mskkconverter/exportms2.png" class="help_image"/>
+		</div>
+		<p>微軟新注音輸入法提供兩種使用者自行加入新詞的方式－一是在輸入時、輸入緩區中還有內容的狀況下，按住鍵盤上的 Shift 按鍵，然後按下左右鍵移動輸入游標，這時候，輸入區下方會出現一條較粗的底線，這條底線的範圍，就是要加入新詞的範圍；在按下了 Enter 鍵之後，便可以加入新詞。另外一種方式，則是叫出新注音輸入法的「使用者造詞工具」。</p>
+		<p>要將新注音輸入法的自訂詞庫轉換到 Yahoo! 奇摩輸入法的好打注音使用，第一步自然是要先匯出新注音輸入法的詞庫。首先請從新注音輸入法的工具列中，選擇「工具選單」，選擇「使用者造詞」，便可以叫出「使用者造詞工具」。</p>
+		<p>在「使用者造詞工具」中，請選擇「檔案」選單中的「匯出」，便可以透過純文字檔案的方式，匯出所有已經建立的使用者自訂詞庫。</p>
+		<p><strong>請注意：</strong>因為新注音輸入法的版本相當多，在寫這個工具的時候，無法找到所有版本的新注音輸入法測試，這個工具只測試過 2002、2003（Windows XP 平台），以及 2007 版（Windows Vista 內建，或購買 Office 2007 附贈）。</p>				
+		<h4>上傳詞庫並轉換</h4>
+		<p>請將剛剛匯出的文字檔，透過本頁上方的表格上傳轉換。上傳成功之後，會自動產生一個供 Yahoo! 奇摩輸入法使用的純文字檔案。</p>
+		<h4>將轉出的詞庫匯入 Yahoo! 奇摩輸入法</h4>
+		<p>轉出的純文字檔案通用於 Yahoo! 奇摩輸入法的 Windows 版本與 Mac OS X 版本－
+		<h5>Windows 版本</h5>
+		<div class="help_image_block">
+			<img src="/images/mskkconverter/importkk1.png" class="help_image"/>
+		</div>
+		<p>請從 Yahoo! 奇摩輸入法的工具列中，點選最右邊的工具（搥子）圖示，從工具選單中選擇「偏好設定」，從「偏好設定」中選擇「詞彙」，便可以看到「匯入自訂詞詞庫」按鈕。</p>
+		<p>按下「匯入自訂詞詞庫」按鈕後，便會詢問您想要匯入哪個檔案，請選擇剛剛下載的檔案，便可完成匯入。</p>
+		<p>如果您想要確認是否正確匯入，您也可以在同一頁當中，按下「啟動詞彙編輯工具」按鈕，叫出 Yahoo! 奇摩輸入法的詞彙編輯工具，在這個工具的編輯畫面中，檢查是否出現剛才匯入的詞彙。</p>
+		<h5>Mac OS X 版本</h5>
+		<p>Mac OS X 版本的匯入方式，可說與 Windows 版本完全相同。</p>
+		<p>當您在使用 Yahoo! 奇摩輸入法時，按下畫面右上方選單列（menu bar）上的 Yahoo! 奇摩輸入法圖示，便可以叫出輸入法選單，從輸入法選單中，便可以叫出偏好設定工具。同樣的，您也可以在 Mac OS X 版本的偏好設定工具中，找到「匯入自訂詞詞庫」按鈕，匯入詞庫。</p>
+		
+	</div>
+</div>

@@ -26,30 +26,32 @@ class MainHandler(webapp.RequestHandler):
 		template_values = {
 			'error_msg' : error_msg,
 		}
-		path = os.path.join(os.path.dirname(__file__), '..', 'html', 'mskkconverter.html')
-		self.response.out.write(html.sharedHTML.header(u"好打注音輸入法匯入微軟新注音自訂詞庫工具"))
+		path = os.path.join(os.path.dirname(__file__), '..', 'html', 'msgoingconverter.html')
+		self.response.out.write(html.sharedHTML.header(u"自然輸入法 9 匯入微軟新注音自訂詞庫工具"))
 		self.response.out.write(template.render(path, template_values))
 		self.response.out.write(html.sharedHTML.toolbar())
 		self.response.out.write(html.sharedHTML.footer())
 
 	def converter(self, text):
-		new_text = "MJSR version 1.0.0\n"
+		new_text = "<!--Going9UserDictBackUp-Begin-->\n"
 		for line in text:
 			parts = line.partition(u'  ')
 			if (len(parts)):
 				phrase = parts[0]
+				if len(phrase) > 4:
+					continue
 				phonetic = parts[2]
 				replaced_string = phonetic.strip()
-				replaced_string = replaced_string.replace(u'ˉ', u',')
-				replaced_string = replaced_string.replace(u'ˊ', u'ˊ,')
-				replaced_string = replaced_string.replace(u'ˇ', u'ˇ,')
-				replaced_string = replaced_string.replace(u'ˋ', u'ˋ,')
+				replaced_string = replaced_string.replace(u'ˉ', u'-')
+				replaced_string = replaced_string.replace(u'ˊ', u'ˊ-')
+				replaced_string = replaced_string.replace(u'ˇ', u'ˇ-')
+				replaced_string = replaced_string.replace(u'ˋ', u'ˋ-')
 				replaced_string = replaced_string.replace(u' ', u'')
 				replaced_string = replaced_string.replace(u'　', u'')
 				replaced_string = replaced_string.replace(u'  ', u'')
-				if replaced_string.endswith(','):
+				if replaced_string.endswith('-'):
 					replaced_string = replaced_string[:len(replaced_string) - 1]
-				line = phrase + u"\t" + replaced_string + u"\t-1.0\t0.0\n"
+				line = replaced_string + "\t" + phrase + "\n"
 				new_text = new_text + line
 		return new_text
 
@@ -60,7 +62,7 @@ class MainHandler(webapp.RequestHandler):
 		except:
 			pass
 		if len(file) == 0:
-			self.redirect("/mskkconverter?error=1")
+			self.redirect("/msgoingconverter?error=1")
 		self.response.headers['Content-Type'] = 'text/plain; charset=utf-8'
 		self.response.headers['Content-Disposition'] = 'attachment; filename=phrase.txt'
 		
@@ -70,7 +72,7 @@ class MainHandler(webapp.RequestHandler):
 		pass
 
 def main():
-	application = webapp.WSGIApplication([('/mskkconverter', MainHandler)], debug=True)
+	application = webapp.WSGIApplication([('/msgoingconverter', MainHandler)], debug=True)
 	wsgiref.handlers.CGIHandler().run(application)
 
 if __name__ == '__main__':
