@@ -1,0 +1,48 @@
+body {
+	font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+	font-size: 12pt;
+	background: #FFF;
+	line-height: 1.4em;
+}
+
+#header {
+	border-bottom: 1px solid #CCC;
+	margin: 30px 0 30px 0;
+}
+
+#header h1 {
+	font-size: 12pt;
+	margin: 0;
+}
+
+#header h1 a, #header h1 a:visited {
+	color: #666;
+	text-decoration: none;
+}
+
+#main {
+	width: 840px;
+	margin: 0 auto 100px auto;
+}
+
+#content {
+	width: 650px;
+}
+
+.help {
+	font-size: 10pt;
+}
+
+.help h4, .help h5 {
+	clear: both;
+}
+
+.help_image {
+	border: 1px solid #666;	
+}
+
+.help_image_block {
+	width: 210px;
+	margin-right: 10px;
+	float: left;
+}

@@ -1,0 +1,22 @@
+#upload_form {
+	line-height: 1em;
+	font-size: 12pt;
+	padding: 10px;
+	border: 1px solid #CCC;
+	margin: 40px 0;
+	background: #333;
+	color: #CCC;
+}
+
+#upload_form input {
+	font-size: 14pt;
+}
+
+#upload_form p {
+	margin: 5px 0;
+}
+
+#uploadedfile {
+	background: #333;
+	color: #CCC;
+}
