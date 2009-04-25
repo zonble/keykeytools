@@ -1,0 +1,14 @@
+application: keykeytools
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /images
+  static_dir: images
+- url: /stylesheets
+  static_dir: stylesheets
+- url: /mskkconverter*
+  script: classes/mskkconverter.py
+- url: .*
+  script: main.py
