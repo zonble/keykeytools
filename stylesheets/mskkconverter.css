@@ -17,6 +17,11 @@
 }
 
 #uploadedfile {
-	background: #333;
+	background: #FFF;
 	color: #CCC;
+}
+
+#submit {
+	background: #CCC;
+	color: #333;
 }
