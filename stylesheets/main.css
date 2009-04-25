@@ -3,6 +3,12 @@ body {
 	font-size: 12pt;
 	background: #FFF;
 	line-height: 1.4em;
+	margin-bottom: 100px;
+}
+
+a, a:link, a:visited {
+	text-decoration: none;
+	color: blue;
 }
 
 #header {
@@ -22,7 +28,7 @@ body {
 
 #main {
 	width: 840px;
-	margin: 0 auto 100px auto;
+	margin: 0 auto 0 auto;
 }
 
 #content {
@@ -81,4 +87,11 @@ h2#page_title {
 
 #toolbar ul a {
 	color: #999;
+}
+
+.credit {
+	width: 840px;
+	margin: 30px auto 0 auto;
+	font-size: 10px;
+	color: #666;
 }
