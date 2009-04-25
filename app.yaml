@@ -10,9 +10,11 @@ handlers:
   static_dir: stylesheets
 - url: /script
   static_dir: script
-- url: /mskkconverter*
+- url: /onekey.*
+  script: classes/onekey.py
+- url: /mskkconverter
   script: classes/mskkconverter.py
-- url: /msgoingconverter*
+- url: /msgoingconverter
   script: classes/msgoingconverter.py
 - url: .*
   script: classes/main.py

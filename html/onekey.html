@@ -1,0 +1,86 @@
+<div id="content">
+	<p class="category">Yahoo! 奇摩輸入法</p>
+	<h2 class="page_title">
+		一點通編輯程式
+	</h2>
+
+	<script type="text/javascript" src="/script/jquery-1.3.2.js"></script>
+	<script type="text/javascript" src="/script/ui/ui.core.js"></script>
+	<script type="text/javascript" src="/script/ui/ui.draggable.js"></script>
+	<script type="text/javascript" src="/script/ui/ui.sortable.js"></script> 
+	<script type="text/javascript" charset="utf-8">
+	$(function() {
+		$("#sortable").sortable({
+			revert: true
+		});
+		$(".draggable").draggable({
+			connectToSortable: '#sortable',
+			helper: 'clone',
+			revert: 'invalid'
+		})
+		$("ul li").disableSelection();
+	});
+	</script>
+	<style type="text/css" media="screen">
+		#onekey_block {
+			overflow: auto;
+			font-size: 10pt;
+		}
+		#onekey_block h3 {
+			font-size: 10pt;
+			margin: 0;
+		}
+		#available_items {
+			float: left;
+		}
+		#selected_items {
+			float: right;
+		}
+		#available_items, #selected_items {
+			padding: 10px;
+			width: 300px;
+			border: 1px solid #CCC;
+			background: #003;
+			color: white;
+			margin: 0;
+		}
+		#available_items ul, #selected_items ul {
+			border: 1px outset #CCC;
+			height: 250px;
+			overflow: auto;
+			background: #334;
+			color: black;
+			padding: 0;
+			margin: 10px 0 0 0;
+		}
+		#onekey_block  ul li {
+			display: block;
+			border: 1px solid white;
+			background: #CCC;
+			margin: 3px;
+			padding: 2px 5px;
+			width: 280px;
+		}
+	</style>
+
+	<div id="onekey_block">
+		<p>請從「可選用項目」中挑選您想要使用的項目，拖至「已選用項目」中。</p>
+		<div id="available_items">
+			<h3>可選用項目</h3>
+			{{ html_list }}
+		</div>
+		<form action="/onekey" method="post">
+		<div id="selected_items">
+			<h3>已選用項目</h3>
+			<ul id="sortable">
+			</ul>
+		</div>
+	</div>
+	<p><input type="submit" name="submit" value="產生選單設定檔" id="some_name"></p>
+	</form>
+
+
+	<div class="help">
+		<h3>使用說明</h3>
+	</div>
+</div>

@@ -1,0 +1,72 @@
+<div id="content">
+	<h2>新增一點通選單項目</h2>
+	<form method="post" action="/onekey/items/add">
+	<table>
+	<tr><td>
+			<label for="service_name">服務名稱（英文）</label>
+		</td>
+		<td>
+			<input type="text" name="service_name" value="" id="service_name" size="60"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="title">標題</label>
+			</td>
+			<td>
+			<input type="text" name="title"  id="title" value="" size="60"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="action">開啟動作（action）</label>
+		</td>
+		<td>
+			<select name="action" id="action">
+			<option label="OpenURL" value="OpenURL">OpenURL</option>
+			<option label="OpenDictionary" value="OpenDictionary">OpenDictionary</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="action_url">要開啟的網址</label>
+		</td>
+		<td>
+			<input type="text" name="action_url" value="http:// {placeholder}" id="action_url" size="60"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="place_holder_encoding">輸入編碼</label>
+		</td>
+		<td>
+			<select name="place_holder_encoding" id="place_holder_encoding">
+				<option label="UTF-8" value="UTF-8">UTF-8</option>
+				<option label="BIG-5" value="BIG-5">BIG-5</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td><label for="input_prompt">輸入提示（prompt）</label>
+		</td>
+		<td>
+			<input type="text" name="input_prompt" value="" id="input_prompt" size="60"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="input_prompt_description">輸入提示詳細說明</label>
+		</td>
+		<td>
+			<input type="text" name="input_prompt_description" value="按 Enter 開始搜尋。\n按 Backspace 刪字，按 ESC 取消。" id="input_prompt_description" size="60"/>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><input type="submit" name="送出" value="submit" /></td>
+	</tr>
+		
+	</table>
+	</form>
+</div>

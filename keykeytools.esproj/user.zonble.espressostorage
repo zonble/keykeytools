@@ -14,37 +14,7 @@
 		<array>
 			<dict>
 				<key>DocumentURL</key>
-				<string>file://localhost/Users/zonble/Work/other/keykeytools/html/main.html</string>
-				<key>StateType</key>
-				<string>DefaultTab</string>
-			</dict>
-			<dict>
-				<key>DocumentURL</key>
-				<string>file://localhost/Users/zonble/Work/other/keykeytools/html/msgoingconverter.html</string>
-				<key>StateType</key>
-				<string>DefaultTab</string>
-			</dict>
-			<dict>
-				<key>DocumentURL</key>
-				<string>file://localhost/Users/zonble/Work/other/keykeytools/classes/html.py</string>
-				<key>StateType</key>
-				<string>DefaultTab</string>
-			</dict>
-			<dict>
-				<key>DocumentURL</key>
-				<string>file://localhost/Users/zonble/Work/other/keykeytools/classes/html.pyc</string>
-				<key>StateType</key>
-				<string>DefaultTab</string>
-			</dict>
-			<dict>
-				<key>DocumentURL</key>
-				<string>file://localhost/Users/zonble/Work/other/keykeytools/html/header.html</string>
-				<key>StateType</key>
-				<string>DefaultTab</string>
-			</dict>
-			<dict>
-				<key>DocumentURL</key>
-				<string>file://localhost/Users/zonble/Work/other/keykeytools/html/toolbar.html</string>
+				<string>file://localhost/Users/zonble/Work/other/keykeytools/html/onekey.html</string>
 				<key>StateType</key>
 				<string>DefaultTab</string>
 			</dict>

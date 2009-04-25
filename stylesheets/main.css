@@ -35,8 +35,8 @@ a, a:link, a:visited {
 	width: 650px;
 }
 
-h2#page_title {
-	margin-bottom: 20px;
+h2.page_title {
+	margin-bottom: 40px;
 }
 
 .error {
@@ -94,4 +94,13 @@ h2#page_title {
 	margin: 30px auto 0 auto;
 	font-size: 10px;
 	color: #666;
+}
+
+.category {
+	font-size: 10pt;
+	color: #666;
+	border: 1px solid #CCC;
+	padding: 2px 5px;
+	width: 120px;
+	text-align: center;
 }
