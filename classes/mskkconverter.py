@@ -13,9 +13,12 @@ import codecs
 
 class MainHandler(webapp.RequestHandler):
 	def get(self):
+		error = self.request.get("error")
+		error_msg = ""
+		if error:
+			error_msg = "您所上傳的檔案不正確！"
 		template_values = {
-			# 'url': url,
-			# 'url_linktext': url_linktext,
+			'error_msg' : error_msg,
 		}
 		path = os.path.join(os.path.dirname(__file__), '..', 'html', 'mskkconverter.html')
 		self.response.out.write(template.render(path, template_values))
@@ -42,10 +45,13 @@ class MainHandler(webapp.RequestHandler):
 		return new_text
 
 	def post(self):
-		file = self.request.get("uploadedfile")
-		file = unicode(file, encoding='utf-16', errors='replace')
-		if len(file) == False:
-			self.redirect("/mskkconverter")
+		file = self.request.get("uploadedfile", default_value='')
+		try:
+			file = unicode(file, encoding='utf-16', errors='replace')
+		except:
+			pass
+		if len(file) == 0:
+			self.redirect("/mskkconverter?error=1")
 		self.response.headers['Content-Type'] = 'text/plain; charset=utf-8'
 		self.response.headers['Content-Disposition'] = 'attachment; filename=phrase.txt'
 		

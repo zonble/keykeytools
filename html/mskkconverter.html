@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>
-		Yahoo! KeyKey 工具組 | 微軟新注音自訂詞庫匯入 Yahoo! 奇摩好打注音工具
+		Yahoo! KeyKey 工具組 | 好打注音輸入法匯入微軟新注音自訂詞庫工具
 	</title>
 	<style type="text/css" media="screen">
 		@import url('/stylesheets/main.css');
@@ -21,9 +21,11 @@
 		</div>
 		<div id="content">
 			<h2 class="page_title">
-				微軟新注音自訂詞庫匯入 Yahoo! 奇摩好打注音工具
+				好打注音輸入法匯入微軟新注音自訂詞庫工具
 			</h2>
-
+			
+			<p class="error">{{ error_msg }}</p>
+			
 			<div id="upload_form">
 				<form enctype="multipart/form-data" action="/mskkconverter" method="POST">
 				<p>請選擇您想要上傳的新注音詞庫檔案</p>

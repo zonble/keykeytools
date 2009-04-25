@@ -29,6 +29,14 @@ body {
 	width: 650px;
 }
 
+h2#page_title {
+	margin-bottom: 20px;
+}
+
+.error {
+	color: red;
+}
+
 .help {
 	font-size: 10pt;
 }
