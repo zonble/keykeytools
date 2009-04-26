@@ -47,10 +47,12 @@
 	</div>
 </div>
 <script>
+$(function() {
 	$('.help').css({display: "none"});
 	$('.showhelp').click( function() {
 		$(this).fadeOut();
 		$('.help').slideDown();
 		return false;
 	});
+});
 </script>

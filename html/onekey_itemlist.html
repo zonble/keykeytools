@@ -1,0 +1,36 @@
+<div id="content">
+	<h2 class="page_title">
+		<a href="/onekey/items">一點通選單項目列表</a>
+	</h2>
+	<p><a href="/onekey/items/add">新增一點通選單項目</a></p>
+	<table class="list_table">
+		<tr><th>名稱</th><th>標題</th><th>編輯</th><th>刪除</th></tr>
+		{% for item in items %}
+		<tr>
+			<td>{{ item.service_name }}</td>
+			<td>{{ item.title }}</td>
+			<td class="edit"><a href="/onekey/items/edit?item_id={{ item.key.id }}">編輯</a></td>
+			<td class="delete"><a href="/onekey/items/delete?item_id={{ item.key.id }}">刪除</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+<style type="text/css" media="screen">
+	.list_table {
+		font-size: 10pt;
+		width: 100%;
+		border: 1px solid #CCC;
+	}
+	.list_table td {
+		padding: 2px;
+		border: 1px solid #CCC;
+	}
+	.list_table tr th {
+		background: #333;
+		color: white;
+		font-weight: normal;
+	}
+	.list_table .delete {
+		text-align: center;
+	}
+</style>

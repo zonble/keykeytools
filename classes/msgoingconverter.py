@@ -30,7 +30,7 @@ class MainHandler(webapp.RequestHandler):
 		self.response.out.write(html.sharedHTML.header(u"自然輸入法 9 匯入微軟新注音自訂詞庫工具"))
 		self.response.out.write(template.render(path, template_values))
 		self.response.out.write(html.sharedHTML.toolbar())
-		self.response.out.write(html.sharedHTML.footer())
+		self.response.out.write(html.sharedHTML.footer(self.request.url))
 
 	def converter(self, text):
 		new_text = "<!--Going9UserDictBackUp-Begin-->\n"

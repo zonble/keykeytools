@@ -18,9 +18,10 @@
 			</ul>
 		</div>
 	</div>
-	<p><input type="submit" name="submit" value="產生選單設定檔" id="some_name"></p>
+	<p><input type="submit" name="submit" value="產生選單設定檔" id="onekey_submit"></p>
 	</form>
 
+	<p><a href="#" class="showhelp">顯示使用說明</a></p>
 
 	<div class="help">
 		<h3>使用說明</h3>
@@ -42,84 +43,44 @@
 		<li><strong>Windows Vista:</strong> C:\Users\[您的使用者名稱]\AppData\Roaming\Yahoo!KeyKey\UserOneKey.plist</li>
 		</ul>
 	</div>
-
-	<script type="text/javascript" charset="utf-8">
-	$(function() {
-		$("#sortable").sortable({
-			revert: true
-		});
-		$("#sortable").droppable({
-			 drop: function(ev, ui) {
-			 	var item = ui.draggable;
-			 	var remove_link = item.find(".remove_link");
-			 	// remove_link.css({color:"red"});
-			 	remove_link.click( function() {
-				 	deleteItem(item);
-				 	return false;
-			 	});
-			}
-		});
-		$(".draggable").draggable({
-			connectToSortable: '#sortable',
-			helper: 'clone',
-			revert: 'invalid'
-		});
-		$(".draggable").droppable({
-			 drop: function(ev, ui) {
-			 	deleteItem(ui.draggable);			 	
-			}			
-		});
-		
-		function deleteItem($item) {
-			$item.fadeOut(function() {
-				$item.remove();
-			});
-		}
-	});	
-	</script>
-	<style type="text/css" media="screen">
-		#onekey_block {
-			overflow: auto;
-			font-size: 10pt;
-		}
-		#onekey_block h3 {
-			font-size: 10pt;
-			margin: 0;
-		}
-		#available_items {
-			float: left;
-		}
-		#selected_items {
-			float: right;
-		}
-		#available_items, #selected_items {
-			padding: 10px;
-			width: 300px;
-			border: 1px solid #CCC;
-			background: #003;
-			color: white;
-			margin: 0;
-		}
-		#available_items ul, #selected_items ul {
-			border: 1px outset #CCC;
-			height: 250px;
-			overflow: auto;
-			background: #334;
-			color: black;
-			padding: 0;
-			margin: 10px 0 0 0;
-		}
-		#onekey_block  ul li {
-			display: block;
-			border: 1px solid white;
-			background: #CCC;
-			margin: 3px;
-			padding: 2px 5px;
-			width: 280px;
-		}
-		#available_items .remove_link {
-			display: none;
-		}
-	</style>
-	
 </div>
+<script type="text/javascript" charset="utf-8">
+$(function() {
+	$("#sortable").sortable({
+		revert: true
+	});
+	$("#sortable").droppable({
+		 drop: function(ev, ui) {
+		 	var item = ui.draggable;
+		 	var remove_link = item.find(".remove_link");
+		 	remove_link.click( function() {
+			 	deleteItem(item);
+			 	return false;
+		 	});
+		}
+	});
+	$(".draggable").draggable({
+		connectToSortable: '#sortable',
+		helper: 'clone',
+		revert: 'invalid'
+	});
+	$(".draggable").droppable({
+		 drop: function(ev, ui) {
+		 	deleteItem(ui.draggable);
+		}
+	});
+	
+	function deleteItem($item) {
+		$item.fadeOut(function() {
+			$item.remove();
+		});
+	}
+	
+	$('.help').css({display: "none"});
+	$('.showhelp').click( function() {
+		$(this).fadeOut();
+		$('.help').slideDown();
+		return false;
+	});	
+});
+</script>

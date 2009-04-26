@@ -45,7 +45,15 @@ class ItemList():
 
 class OneKeyItemListHandler(webapp.RequestHandler):
 	def get(self):
-		template_values = {}
+		user = users.get_current_user()
+		if user == None:
+			self.redirect("/")
+		# if users.is_current_user_admin() == False:
+		# 	self.redirect("/")
+		items = OneKeyItem.all()
+		template_values = {
+			"items": items
+		}
 		path = os.path.join(os.path.dirname(__file__), '..', 'html', 'onekey_itemlist.html')
 		self.response.out.write(html.sharedHTML.header())
 		self.response.out.write(template.render(path, template_values))
@@ -53,7 +61,10 @@ class OneKeyItemListHandler(webapp.RequestHandler):
 		self.response.out.write(html.sharedHTML.footer())
 		
 class AddOneKeyItemHandler(webapp.RequestHandler):
-	def get(self):	
+	def get(self):
+		user = users.get_current_user()
+		if user == None:
+			self.redirect("/")
 		template_values = {}
 		path = os.path.join(os.path.dirname(__file__), '..', 'html', 'onekey_add.html')
 		self.response.out.write(html.sharedHTML.header())
@@ -61,6 +72,9 @@ class AddOneKeyItemHandler(webapp.RequestHandler):
 		self.response.out.write(html.sharedHTML.toolbar())
 		self.response.out.write(html.sharedHTML.footer())
 	def post(self):
+		user = users.get_current_user()
+		if user == None:
+			self.redirect("/")
 		service_name = self.request.get("service_name")
 		title = self.request.get("title")
 		action = self.request.get("action")
@@ -93,7 +107,7 @@ class MainHandler(webapp.RequestHandler):
 		self.response.out.write(html.sharedHTML.header(u"一點通編輯程式"))
 		self.response.out.write(template.render(path, template_values))
 		self.response.out.write(html.sharedHTML.toolbar())
-		self.response.out.write(html.sharedHTML.footer())
+		self.response.out.write(html.sharedHTML.footer(self.request.url))
 	def xml_for_key_and_value(self, key, value):
 		xml = u"\t\t\t\t<key>" + key + "</key>\n"
 		xml = xml + u"\t\t\t\t<string>" + value + "</string>\n"

@@ -1,0 +1,48 @@
+#onekey_block {
+	overflow: auto;
+	font-size: 10pt;
+	border: 1px solid #999;
+	padding: 8px;
+	background: #CCC;
+}
+#onekey_block h3 {
+	font-size: 10pt;
+	margin: 0;
+}
+#available_items {
+	float: left;
+}
+#selected_items {
+	float: right;
+}
+#available_items, #selected_items {
+	padding: 10px;
+	width: 290px;
+	border: 1px solid #CCC;
+	background: #003;
+	color: white;
+	margin: 0;
+}
+#available_items ul, #selected_items ul {
+	border: 1px outset #CCC;
+	height: 250px;
+	overflow: auto;
+	background: #334;
+	color: black;
+	padding: 0;
+	margin: 10px 0 0 0;
+}
+#onekey_block  ul li {
+	display: block;
+	border: 1px solid white;
+	background: #CCC;
+	margin: 3px;
+	padding: 2px 5px;
+	width: 270px;
+}
+#available_items .remove_link {
+	display: none;
+}
+#onekey_submit {
+	font-size: 20pt;
+}

@@ -30,7 +30,7 @@ class MainHandler(webapp.RequestHandler):
 		self.response.out.write(html.sharedHTML.header(u"好打注音輸入法匯入微軟新注音自訂詞庫工具"))
 		self.response.out.write(template.render(path, template_values))
 		self.response.out.write(html.sharedHTML.toolbar())
-		self.response.out.write(html.sharedHTML.footer())
+		self.response.out.write(html.sharedHTML.footer(self.request.url))
 
 	def converter(self, text):
 		new_text = "MJSR version 1.0.0\n"
