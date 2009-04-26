@@ -1,10 +1,11 @@
 <div id="content">
 	<p class="category">Yahoo! 奇摩輸入法</p>
 	<h2 class="page_title">
-		一點通編輯程式
+		<a href="/onekey">「一點通」設定產生工具</a>
 	</h2>
 
 	<div id="onekey_block">
+	<a name="form"></a>
 		<p>請從「可選用項目」中挑選您想要使用的項目，拖至「已選用項目」中。</p>
 		<div id="available_items">
 			<h3>可選用項目</h3>
@@ -23,13 +24,23 @@
 
 	<div class="help">
 		<h3>使用說明</h3>
-		<h4>什麼是一點通？</h4>
+		<h4>什麼是「一點通」輸入法搜尋整合功能？</h4>
 		<div class="help_image_block">
 			<img src="/images/onekey/onekey.png" />
 		</div>
 		<p>「一點通」是 Yahoo! 奇摩輸入法提供的線上服務整合功能。這項功能可以讓您在使用輸入法輸入文字時，快速取用各項網路服務。</p>
-		<p>方法是，按下鍵盤上的「`」按鍵（位於鍵盤的左上方），便會出現功能選單，您可以在選單中選擇「英漢字典」、「漢英字典」…等功能，接著，不用離開輸入法，直接輸入想要搜尋的資料，便可以快速</p>
+		<p>只要按下鍵盤上的「`」按鍵（位於鍵盤的左上方），便會出現功能選單，您可以在選單中選擇「英漢字典」、「漢英字典」…等功能，不用離開輸入法，直接輸入想要搜尋的關鍵字，開啟相關功能，尋找您想要的資料。</p>
+		<p>「一點通」功能預設提供 Yahoo! 奇摩本身的線上服務，不過，這個選單本身是一個以 XML 寫成的設定檔，因此，只要修改這個設定檔案，便可以擴充「一點通」功能，取用 Yahoo! 奇摩之外的其他服務。</p>
+		<p>因為這個設定檔的內容稍微有些複雜（設定內容請參見官方說明的<a href="http://tw.download.yahoo.com/keykey/detail_intro.php">一點通功能加強</a>頁面），因此，這邊提供了一些可以直接選用的設定模版，提供國人常用的一些服務的選擇，讓您快速產生設定。</p>
+		<h4>線上產生設定檔</h4>
+		<p>在<a href="#form">上方的產生器界面</a>中，分成兩個主要部分－佐方的「可選用項目」，便是系統所提供的可用範本，如果您想要使用其中的一個項目，請在這個項目上方按住滑鼠不放，拖到右方的「已選擇項目」。</p>
+		<p>「已選用項目」就是您計畫產生的「一點通」選單的內容，您也可以在這個地方，調整每個項目的前後順序。最後，按下「產生選單設定檔」按鈕，便會開始下載選單設定檔，檔名為「UserOneKey.plist」。</p>
 		<h4>將產生的設定檔案複製到正確目錄</h4>
+		<p>如官方說明所說，請將檔案複製到正確位置－</p>
+		<ul>
+		<li><strong>Windows XP:</strong> C:\Documents and Settings\[您的使用者名稱]\Application Data\Yahoo! KeyKey\UserOneKey.plist</li>
+		<li><strong>Windows Vista:</strong> C:\Users\[您的使用者名稱]\AppData\Roaming\Yahoo!KeyKey\UserOneKey.plist</li>
+		</ul>
 	</div>
 
 	<script type="text/javascript" charset="utf-8">
