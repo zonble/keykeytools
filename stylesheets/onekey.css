@@ -25,7 +25,7 @@
 }
 #available_items ul, #selected_items ul {
 	border: 1px outset #CCC;
-	height: 250px;
+	height: 280px;
 	overflow: auto;
 	background: #334;
 	color: black;
@@ -38,11 +38,12 @@
 	background: #CCC;
 	margin: 3px;
 	padding: 2px 5px;
-	width: 270px;
+	width: 250px;
 }
 #available_items .remove_link {
 	display: none;
 }
 #onekey_submit {
 	font-size: 20pt;
+	background: #CCC;
 }

@@ -48,6 +48,8 @@ h2.page_title a, h2.page_title a:link, h2.page_title a:visited {
 }
 
 .help {
+	margin-top: 30px;
+	border-top: 1px solid #CCC;
 	font-size: 10pt;
 }
 
@@ -119,4 +121,8 @@ h2.page_title a, h2.page_title a:link, h2.page_title a:visited {
 	padding: 2px 5px;
 	width: 120px;
 	text-align: center;
+}
+
+.showhelp {
+	font-size: 10pt;
 }

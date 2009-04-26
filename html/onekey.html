@@ -52,6 +52,7 @@ $(function() {
 	$("#sortable").droppable({
 		 drop: function(ev, ui) {
 		 	var item = ui.draggable;
+			item.addClass("sortable");
 		 	var remove_link = item.find(".remove_link");
 		 	remove_link.click( function() {
 			 	deleteItem(item);
@@ -64,9 +65,11 @@ $(function() {
 		helper: 'clone',
 		revert: 'invalid'
 	});
-	$(".draggable").droppable({
-		 drop: function(ev, ui) {
-		 	deleteItem(ui.draggable);
+	$("#draggable").droppable({
+		accept: ".sortable",
+		drop: function(ev, ui) {
+			item = ui.draggable;
+			deleteItem(item);
 		}
 	});
 	

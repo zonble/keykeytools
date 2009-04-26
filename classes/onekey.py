@@ -31,7 +31,7 @@ class OneKeyItem(db.Model):
 class ItemList():
 	def html_list(self):
 		items = OneKeyItem.all()
-		html = u"<ul>"
+		html = u"<ul id='draggable'>"
 		for item in items:
 			title = item.title
 			item_id = item.key().id()
@@ -135,7 +135,7 @@ class MainHandler(webapp.RequestHandler):
 		return xml
 		pass
 	def post(self):
-		self.response.headers['Content-Type'] = 'text/plain; charset=utf-8'
+		self.response.headers['Content-Type'] = 'text/plist; charset=utf-8'
 		self.response.headers['Content-Disposition'] = 'attachment; filename=UserOneKey.plist'
 		header = """<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
