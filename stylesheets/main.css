@@ -39,6 +39,10 @@ h2.page_title {
 	margin-bottom: 40px;
 }
 
+h2.page_title a, h2.page_title a:link, h2.page_title a:visited {
+	color: #000;
+}
+
 .error {
 	color: red;
 }
@@ -49,6 +53,18 @@ h2.page_title {
 
 .help h4, .help h5 {
 	clear: both;
+}
+
+.help h3 {	
+	font-size: 14pt;
+}
+
+.help h4 {	
+	font-size: 12pt;
+}
+
+.help h5 {	
+	font-size: 10pt;
 }
 
 .help_image {

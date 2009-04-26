@@ -1,7 +1,7 @@
 <div id="content">
 	<p class="category">自然輸入法</p>
 	<h2 class="page_title">
-		自然輸入法 9 匯入微軟新注音自訂詞庫工具
+		<a href="/msgoingconverter">自然輸入法 9 匯入微軟新注音自訂詞庫工具</a>
 	</h2>
 
 	<p class="error">{{ error_msg }}</p>
@@ -12,6 +12,9 @@
 		<p><input name="uploadedfile" type="file" id="uploadedfile"/>&nbsp;&nbsp;<input type="submit" value="上傳！" id="submit"/></p>
 		</form>	
 	</div>
+	
+	<p><a href="#" class="showhelp">顯示使用說明</a></p>
+	
 	<div class="help">
 		<h3>使用說明</h3>
 
@@ -41,3 +44,11 @@
 		</ul>
 	</div>
 </div>
+<script>
+	$('.help').css({display: "none"});
+	$('.showhelp').click( function() {
+		$(this).fadeOut();
+		$('.help').slideDown();
+		return false;
+	});
+</script>
