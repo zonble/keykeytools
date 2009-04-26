@@ -14,7 +14,19 @@
 		<array>
 			<dict>
 				<key>DocumentURL</key>
+				<string>file://localhost/Users/zonble/Work/other/keykeytools/classes/onekey.py</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
 				<string>file://localhost/Users/zonble/Work/other/keykeytools/html/onekey.html</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/zonble/Work/other/keykeytools/html/header.html</string>
 				<key>StateType</key>
 				<string>DefaultTab</string>
 			</dict>
