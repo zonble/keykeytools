@@ -30,7 +30,7 @@ class OneKeyItem(db.Model):
 
 class ItemList():
 	def html_list(self):
-		items = OneKeyItem.all()
+		items = OneKeyItem.all().order('title')
 		html = u"<ul id='draggable'>"
 		for item in items:
 			title = item.title
@@ -104,7 +104,7 @@ class MainHandler(webapp.RequestHandler):
 			'html_list': html_list,
 		}
 		path = os.path.join(os.path.dirname(__file__), '..', 'html', 'onekey.html')
-		self.response.out.write(html.sharedHTML.header(u"一點通編輯程式"))
+		self.response.out.write(html.sharedHTML.header(u"「一點通」設定產生工具"))
 		self.response.out.write(template.render(path, template_values))
 		self.response.out.write(html.sharedHTML.toolbar())
 		self.response.out.write(html.sharedHTML.footer(self.request.url))
