@@ -14,12 +14,6 @@
 		<array>
 			<dict>
 				<key>DocumentURL</key>
-				<string>file://localhost/Users/zonble/Work/other/keykeytools/classes/onekey.py</string>
-				<key>StateType</key>
-				<string>DefaultTab</string>
-			</dict>
-			<dict>
-				<key>DocumentURL</key>
 				<string>file://localhost/Users/zonble/Work/other/keykeytools/html/header.html</string>
 				<key>StateType</key>
 				<string>DefaultTab</string>
@@ -33,6 +27,24 @@
 			<dict>
 				<key>DocumentURL</key>
 				<string>file://localhost/Users/zonble/Work/other/keykeytools/html/footer.html</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/zonble/Work/other/keykeytools/html/toolbar.html</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/zonble/Work/other/keykeytools/html/imremoval.html</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/zonble/Work/other/keykeytools/html/main.html</string>
 				<key>StateType</key>
 				<string>DefaultTab</string>
 			</dict>
