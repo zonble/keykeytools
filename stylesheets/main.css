@@ -107,6 +107,19 @@ h2.page_title a, h2.page_title a:link, h2.page_title a:visited {
 	color: #999;
 }
 
+#twitter_div {
+	top: 50px;
+	width: 180px;
+	font-size: 10pt;
+	line-height: 1.5em;
+	margin-left: 670px;
+	position: absolute;	
+	padding: 10px;	
+	padding-bottom: 50px;
+	color: #999;
+	border-left: 1px solid #CCC;
+}
+
 .credit {
 	width: 840px;
 	margin: 30px auto 0 auto;
